@@ -10,7 +10,7 @@ function App() {
   const [emailList, setEmailList] = useState([]);
   const [history, setHistory] = useState([]);
 
-  const API = "https://bulk-mail-app-g4td.vercel.app";
+  const API = "http://localhost:5000";
 
   // Excel upload
   const handleFile = (event) => {
