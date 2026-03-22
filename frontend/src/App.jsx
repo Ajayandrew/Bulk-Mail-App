@@ -10,7 +10,7 @@ function App() {
   const [emailList, setEmailList] = useState([]);
   const [history, setHistory] = useState([]);
 
-  const API = "https://bulk-mail-app-g9sd.vercel.app";
+  const API = "http://localhost:5000";
 
   // Excel upload
   const handleFile = (event) => {
@@ -72,9 +72,9 @@ function App() {
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 to-blue-700 p-6">
       {/* Header */}
       <header className="text-white text-center mb-6">
-        <h1 className="text-4xl font-bold drop-shadow-lg">📧 Bulk Mail APP</h1>
+        <h1 className="text-4xl font-bold drop-shadow-lg">📧 Bulk Mail App</h1>
         <p className="text-lg mt-1 drop-shadow-sm">
-          Send multiple emails easily with style and track your history!     
+          Send multiple emails easily with style and track your history!
         </p>
       </header>
 
@@ -120,7 +120,7 @@ function App() {
             className={`w-full py-3 rounded-xl text-white font-semibold transition 
               ${status ? "bg-gray-400 cursor-not-allowed" : "bg-indigo-700 hover:bg-indigo-600"}`}
           >
-            {status ? "Sending..." : "Send Emails 🚀"}
+            {status ? "Sending..." : "Send Emails"}
           </button>
         </div>
 
