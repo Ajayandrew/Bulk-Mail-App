@@ -10,7 +10,7 @@ function App() {
   const [emailList, setEmailList] = useState([]);
   const [history, setHistory] = useState([]);
 
-  const API = "https://bulk-mail-app-1-iwdf.onrender.com";
+  const API = "https://bulk-mail-app-g9sd.vercel.app";
 
   // Excel upload
   const handleFile = (event) => {
