@@ -5,11 +5,7 @@ const MailSchema = new mongoose.Schema({
   body: String,
   sender: String,
   recipients: [String],
-  status: String,
-  createdAt: {
-    type: Date,
-    default: Date.now
-  }
-});
+  status: String
+}, { timestamps: true }); // ✅ REQUIRED for createdAt
 
 module.exports = mongoose.model("Mail", MailSchema);
