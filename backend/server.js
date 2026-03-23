@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const app = express();
 
-app.use(cors()); // ✅ allow all (fix CORS issue)
+app.use(cors({origin: '*'}));
 app.use(express.json());
 
 // ✅ MongoDB connection
