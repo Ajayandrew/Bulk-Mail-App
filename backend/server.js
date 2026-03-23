@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const app = express();
 
-app.use(cors({origin: '*'}));
+app.use(cors({origin: 'https://bulk-mail-app-seven.vercel.app'}));
 app.use(express.json());
 
 // ✅ MongoDB connection
