@@ -10,7 +10,7 @@ This app allows you to send emails to multiple recipients using an Excel file an
 
 ## 📂 GitHub Repository
 
-🔗 Repository: 
+🔗 Repository: https://github.com/Ajayandrew/Bulk-Mail-App.git
 
 ---
 
