@@ -93,7 +93,7 @@ https://bulk-mail-app-4.onrender.com
 Update frontend API:
 
 ```js
-const API = "https://bulk-mail-app-1-iwdf.onrender.com";
+const API = "(https://bulk-mail-app-4.onrender.com)";
 ```
 
 ---
