@@ -3,11 +3,9 @@ const router = express.Router();
 const nodemailer = require("nodemailer");
 const Mail = require("../models/Mail");
 
-// ✅ SEND MAIL
 router.post("/send", async (req, res) => {
   const { subject, body, sender, emailList } = req.body;
 
-  // ✅ validation (prevents crash)
   if (!emailList || !Array.isArray(emailList)) {
     return res.status(400).json({ error: "Invalid email list" });
   }
@@ -16,22 +14,21 @@ router.post("/send", async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: sender,
+        user: process.env.EMAIL,      // ✅ FIXED
         pass: process.env.PASSWORD
       }
     });
 
-    // ✅ send emails
     for (let email of emailList) {
       await transporter.sendMail({
-        from: sender,
+        from: `"${sender}" <${process.env.EMAIL}>`, // ✅ FIXED
         to: email,
         subject,
-        text: body
+        text: body,
+        replyTo: sender
       });
     }
 
-    // ✅ save success
     await Mail.create({
       subject,
       body,
@@ -45,7 +42,6 @@ router.post("/send", async (req, res) => {
   } catch (err) {
     console.log("Mail Error:", err.message);
 
-    // ✅ save failure safely
     try {
       await Mail.create({
         subject,
@@ -62,7 +58,7 @@ router.post("/send", async (req, res) => {
   }
 });
 
-// ✅ HISTORY (FIXED 500 ERROR)
+// HISTORY
 router.get("/history", async (req, res) => {
   try {
     const data = await Mail.find().sort({ createdAt: -1 });
