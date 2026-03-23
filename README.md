@@ -4,6 +4,15 @@ A Full Stack Bulk Email Application built using React, Node.js, Express, and Mon
 This app allows you to send emails to multiple recipients using an Excel file and track email history.
 
 ---
+## 🚀 Live Demo
+
+🔗 Live Site: https://bulk-mail-app-seven.vercel.app/
+
+## 📂 GitHub Repository
+
+🔗 Repository: 
+
+---
 
 ## 🚀 Features
 
