@@ -10,7 +10,7 @@ function App() {
   const [emailList, setEmailList] = useState([]);
   const [history, setHistory] = useState([]);
 
-  const API ='http://localhost:5000'; // ✅ FIXED URL
+  const API ='https://bulk-mail-app-4.onrender.com'; // ✅ FIXED URL
 
   // Excel upload
   const handleFile = (event) => {
