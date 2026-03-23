@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const app = express();
 
-app.use(cors({origin:'https://bulk-mail-app-y49e.vercel.app'}));
+app.use(cors({ origin: "http://localhost:5173"}));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
